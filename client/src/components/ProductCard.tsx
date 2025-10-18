@@ -6,6 +6,7 @@ import { ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { motion } from "framer-motion";
 // import { toast } from "react-toastify";
 
 const ProductCard = ({ product }: { product: ProductType }) => {
@@ -40,12 +41,16 @@ const ProductCard = ({ product }: { product: ProductType }) => {
   // };
 
   return (
-    <div className="shadow-lg rounded-lg overflow-hidden">
+    <motion.div
+      whileHover={{ scale: 1.03 }}
+      transition={{ duration: 0.2 }}
+      className="shadow-lg rounded-lg overflow-hidden"
+    >
       {/* IMAGE */}
       <Link href={`/products/${product.id}`}>
         <div className="relative aspect-[2/3]">
           <Image
-            src={product.images[productTypes.color]}
+            src={product.images[productTypes.color] || "/placeholder.png"}
             alt={product.name}
             fill
             className="object-cover hover:scale-105 transition-all duration-300"
@@ -88,6 +93,9 @@ const ProductCard = ({ product }: { product: ProductType }) => {
                       : "border-gray-200"
                   } rounded-full p-[1.2px]`}
                   key={color}
+                  role="button"
+                  aria-label={`Color ${color}`}
+                  title={color}
                   onClick={() =>
                     handleProductType({ type: "color", value: color })
                   }
@@ -103,7 +111,14 @@ const ProductCard = ({ product }: { product: ProductType }) => {
         </div>
         {/* PRICE AND ADD TO CART BUTTON */}
         <div className="flex items-center justify-between">
-          <p className="font-medium">${product.price.toFixed(2)}</p>
+          {/* <p className="font-medium">${product.price.toFixed(2)}</p> */}
+          <p className="font-medium">
+            {new Intl.NumberFormat("fr-FR", {
+              style: "currency",
+              currency: "EUR", // ou "XOF" pour franc CFA
+            }).format(product.price)}
+          </p>
+
           <button
             // onClick={handleAddToCart}
             className="ring-1 ring-gray-200 shadow-lg rounded-md px-2 py-1 text-sm cursor-pointer hover:text-white hover:bg-black transition-all duration-300 flex items-center gap-2"
@@ -113,7 +128,7 @@ const ProductCard = ({ product }: { product: ProductType }) => {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -8,7 +8,7 @@ import Link from "next/link";
 const products: ProductsType = [
   {
     id: 1,
-    name: "Adidas CoreFit T-Shirt",
+    name: "Afrique Avenir T-Shirt",
     shortDescription:
       "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     description:
@@ -22,21 +22,21 @@ const products: ProductsType = [
       green: "/products/1gr.png",
     },
   },
-  {
-    id: 2,
-    name: "Puma Ultra Warm Zip",
-    shortDescription:
-      "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
-    description:
-      "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
-    price: 59.9,
-    sizes: ["s", "m", "l", "xl"],
-    colors: ["gray", "green"],
-    images: { gray: "/products/2g.png", green: "/products/2gr.png" },
-  },
+  // {
+  //   id: 2,
+  //   name: "Afrique Avenir Warm Zip",
+  //   shortDescription:
+  //     "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
+  //   description:
+  //     "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
+  //   price: 59.9,
+  //   sizes: ["s", "m", "l", "xl"],
+  //   colors: ["gray", "green"],
+  //   images: { gray: "/products/2g.png", green: "/products/2gr.png" },
+  // },
   {
     id: 3,
-    name: "Nike Air Essentials Pullover",
+    name: "Afrique Avenir Sweat",
     shortDescription:
       "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     description:
@@ -50,21 +50,21 @@ const products: ProductsType = [
       black: "/products/3bl.png",
     },
   },
-  {
-    id: 4,
-    name: "Nike Dri Flex T-Shirt",
-    shortDescription:
-      "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
-    description:
-      "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
-    price: 29.9,
-    sizes: ["s", "m", "l"],
-    colors: ["white", "pink"],
-    images: { white: "/products/4w.png", pink: "/products/4p.png" },
-  },
+  // {
+  //   id: 4,
+  //   name: "Afrique Avenir Dri Flex T-Shirt",
+  //   shortDescription:
+  //     "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
+  //   description:
+  //     "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
+  //   price: 29.9,
+  //   sizes: ["s", "m", "l"],
+  //   colors: ["white", "pink"],
+  //   images: { white: "/products/4w.png", pink: "/products/4p.png" },
+  // },
   {
     id: 5,
-    name: "Under Armour StormFleece",
+    name: "Afrique Avenir Hoodie",
     shortDescription:
       "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     description:
@@ -78,41 +78,85 @@ const products: ProductsType = [
       black: "/products/5bl.png",
     },
   },
+  // {
+  //   id: 6,
+  //   name: "Nike Air Max 270",
+  //   shortDescription:
+  //     "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
+  //   description:
+  //     "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
+  //   price: 59.9,
+  //   sizes: ["40", "42", "43", "44"],
+  //   colors: ["gray", "white"],
+  //   images: { gray: "/products/6g.png", white: "/products/6w.png" },
+  // },
+  // {
+  //   id: 7,
+  //   name: "Nike Ultraboost Pulse ",
+  //   shortDescription:
+  //     "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
+  //   description:
+  //     "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
+  //   price: 69.9,
+  //   sizes: ["40", "42", "43"],
+  //   colors: ["gray", "pink"],
+  //   images: { gray: "/products/7g.png", pink: "/products/7p.png" },
+  // },
+  // {
+  //   id: 8,
+  //   name: "Levi’s Classic Denim",
+  //   shortDescription:
+  //     "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
+  //   description:
+  //     "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
+  //   price: 59.9,
+  //   sizes: ["s", "m", "l"],
+  //   colors: ["blue", "green"],
+  //   images: { blue: "/products/8b.png", green: "/products/8gr.png" },
+  // },
   {
-    id: 6,
-    name: "Nike Air Max 270",
+    id: 9,
+    name: "AFRIQUE AVENIR Bag",
     shortDescription:
       "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     description:
       "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
-    price: 59.9,
-    sizes: ["40", "42", "43", "44"],
-    colors: ["gray", "white"],
-    images: { gray: "/products/6g.png", white: "/products/6w.png" },
+    price: 9.9,
+    sizes: ["m"],
+    colors: ["gray"],
+    images: { gray: "/products/9g.jpg", green: "/products/8gr.png" },
   },
   {
-    id: 7,
-    name: "Nike Ultraboost Pulse ",
+    id: 10,
+    name: "AFRIQUE AVENIR Cap",
     shortDescription:
       "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     description:
       "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
-    price: 69.9,
-    sizes: ["40", "42", "43"],
-    colors: ["gray", "pink"],
-    images: { gray: "/products/7g.png", pink: "/products/7p.png" },
+    price: 9.9,
+    sizes: ["m"],
+    colors: ["blue", "green", "yellow"],
+    images: {
+      blue: "/products/10b.jpg",
+      green: "/products/10gr.jpg",
+      yellow: "/products/10y.jpg",
+    },
   },
   {
-    id: 8,
-    name: "Levi’s Classic Denim",
+    id: 11,
+    name: "AFRIQUE AVENIR Cap",
     shortDescription:
       "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     description:
       "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
-    price: 59.9,
-    sizes: ["s", "m", "l"],
-    colors: ["blue", "green"],
-    images: { blue: "/products/8b.png", green: "/products/8gr.png" },
+    price: 9.9,
+    sizes: ["m"],
+    colors: ["black", "white", "blue"],
+    images: {
+      black: "/products/11black.jpg",
+      blue: "/products/11blue.jpg",
+      white: "/products/11w.jpg",
+    },
   },
 ];
 
@@ -127,11 +171,11 @@ const ProductList = ({
     <div className="w-full">
       <Categories />
 
-      {/* <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-12">
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
-      </div> */}
+      </div>
       <Link
         href={category ? `/products/?category=${category}` : "/products"}
         className="flex justify-end mt-4 underline text-sm text-gray-500"
