@@ -2,10 +2,15 @@ import { products } from "@/app/db/productsDB";
 import ProductInteraction from "@/components/ProductInteraction";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
+// interface ProductPageProps {
+//   params: { id: string };
+//   searchParams: { color?: string; size?: string };
+// }
 
 interface ProductPageProps {
-  params: { id: string };
-  searchParams: { color?: string; size?: string };
+  params: Promise<{ id: string }>;
+  searchParams: Promise<{ color?: string; size?: string }>;
 }
 
 // export const generateMetadata = async ({
@@ -39,16 +44,48 @@ interface ProductPageProps {
 //   };
 // };
 
+// export const generateMetadata = async ({
+//   params,
+// }: {
+//   params: { id: string };
+// }) => {
+//   const product = products.find((p) => p.id === Number(params.id));
+
+//   if (!product) return { title: "Product not found" };
+
+//   const imageUrl = Object.values(product.images)[0]; // première image
+//   return {
+//     title: `${product.name} | AFRIQUE AVENIR STORE`,
+//     description: product.description,
+//     openGraph: {
+//       title: product.name,
+//       description: product.description,
+//       images: [imageUrl],
+//     },
+//     twitter: {
+//       card: "summary_large_image",
+//       title: product.name,
+//       description: product.description,
+//       images: [imageUrl],
+//     },
+//   };
+// };
+
+// --- Génération dynamique des métadonnées (SEO) ---
 export const generateMetadata = async ({
   params,
 }: {
-  params: { id: string };
-}) => {
-  const product = products.find((p) => p.id === Number(params.id));
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> => {
+  const { id } = await params;
+  const product = products.find((p) => p.id === Number(id));
 
-  if (!product) return { title: "Product not found" };
+  if (!product) {
+    return { title: "Product not found | AFRIQUE AVENIR STORE" };
+  }
 
-  const imageUrl = Object.values(product.images)[0]; // première image
+  const imageUrl = Object.values(product.images)[0];
+
   return {
     title: `${product.name} | AFRIQUE AVENIR STORE`,
     description: product.description,
@@ -66,9 +103,11 @@ export const generateMetadata = async ({
   };
 };
 
-const ProductPage = ({ params, searchParams }: ProductPageProps) => {
-  const { id } = params;
-  const { color, size } = searchParams;
+const ProductPage = async ({ params, searchParams }: ProductPageProps) => {
+  // const { id } = params;
+  const { id } = await params;
+  const { color, size } = await searchParams;
+  // const { color, size } = searchParams;
   const product = products.find((p) => p.id === Number(id));
   // if (!product) {
   //   return (
