@@ -5,6 +5,7 @@ export const products: ProductsType = [
   {
     id: 1,
     name: "Afrique Avenir T-Shirt",
+    category: "t-Shirts",
     shortDescription:
       "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     description:
@@ -33,6 +34,7 @@ export const products: ProductsType = [
   {
     id: 3,
     name: "Afrique Avenir Sweat",
+    category: "sweats",
     shortDescription:
       "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     description:
@@ -61,6 +63,7 @@ export const products: ProductsType = [
   {
     id: 5,
     name: "Afrique Avenir Hoodie",
+    category: "sweats",
     shortDescription:
       "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     description:
@@ -113,6 +116,7 @@ export const products: ProductsType = [
   {
     id: 9,
     name: "AFRIQUE AVENIR Bag",
+    category: "bags",
     shortDescription:
       "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     description:
@@ -124,7 +128,8 @@ export const products: ProductsType = [
   },
   {
     id: 10,
-    name: "AFRIQUE AVENIR Cap",
+    name: "AFRIQUE AVENIR Mug",
+    category: "mugs",
     shortDescription:
       "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     description:
@@ -141,6 +146,7 @@ export const products: ProductsType = [
   {
     id: 11,
     name: "AFRIQUE AVENIR Cap",
+    category: "caps",
     shortDescription:
       "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     description:

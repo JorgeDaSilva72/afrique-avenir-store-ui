@@ -2,6 +2,7 @@ import { z } from "zod";
 
 export type ProductType = {
   id: string | number;
+  category: string;
   name: string;
   shortDescription: string;
   description: string;

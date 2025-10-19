@@ -87,7 +87,7 @@ export const generateMetadata = async ({
   const imageUrl = Object.values(product.images)[0];
 
   return {
-    title: `${product.name} | AFRIQUE AVENIR STORE`,
+    title: `${product.name} `,
     description: product.description,
     openGraph: {
       title: product.name,
