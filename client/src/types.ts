@@ -1,3 +1,5 @@
+import { z } from "zod";
+
 export type ProductType = {
   id: string | number;
   name: string;
@@ -17,3 +19,18 @@ export type CartItemType = ProductType & {
   selectedColor: string;
 };
 export type CartItemsType = CartItemType[];
+
+export const shippingFormSchema = z.object({
+  name: z.string().min(1, "Name is required!"),
+  email: z.email().min(1, "Email is required!"),
+  phone: z
+    .string()
+    .min(7, "Phone number must be between 7 and 10 digits!")
+    .max(10, "Phone number must be between 7 and 10 digits!")
+    .regex(/^\d+$/, "Phone number must contain only numbers!"),
+  address: z.string().min(1, "Address is required!"),
+  city: z.string().min(1, "City is required!"),
+  country: z.string().min(1, "Country is required!"),
+});
+
+export type ShippingFormInputs = z.infer<typeof shippingFormSchema>;
