@@ -28,8 +28,8 @@ const useCartStore = create<CartStoreStateType & CartStoreActionsType>()(
               {
                 ...product,
                 quantity: product.quantity || 1,
-                selectedSize: product.selectedSize,
-                selectedColor: product.selectedColor,
+                // selectedSize: product.selectedSize, // product already has thes info
+                // selectedColor: product.selectedColor,// product already has thes info
               },
             ],
           };
